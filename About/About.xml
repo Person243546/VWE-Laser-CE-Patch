@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>VWE:L CEPatch</name>
+  <author>Me</author>
+  <supportedVersions>
+    <li>1.2</li>
+  </supportedVersions>
+  <packageId>me.cepatch4</packageId>
+  <description>I tweak vwe:l.</description>
+</ModMetaData>

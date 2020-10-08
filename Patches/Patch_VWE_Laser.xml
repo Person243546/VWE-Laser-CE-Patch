@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="VWEL_Gun_LaserSMG"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="VWEL_Gun_LaserPistol"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="VWEL_Gun_SalvagedLaserPistol"]</xpath>
+	</Operation>
+
+
+	<Operation Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[
+			defName="VWEL_Gun_LaserRifle" or
+			defName="VWEL_Gun_LaserShotgun" or	
+			defName="VWEL_Gun_LaserMinigun" or	
+			defName="VWEL_Gun_SalvagedLaserRifle" or	
+			defName="VWEL_Gun_SalvagedLaserShotgun" or	
+			defName="VWEL_Gun_SalvagedLaserSniperRifle" or	
+			defName="VWEL_Gun_LaserSniperRifle"				
+			]/tools</xpath>
+			<value>
+			  <tools>
+				<li Class="CombatExtended.ToolCE">
+				  <label>stock</label>
+				  <capacities>
+					<li>Blunt</li>
+				  </capacities>
+				  <power>8</power>
+				  <cooldownTime>1.55</cooldownTime>
+				  <chanceFactor>1.5</chanceFactor>
+				  <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				  <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				  <label>barrel</label>
+				  <capacities>
+					<li>Blunt</li>
+				  </capacities>
+				  <power>5</power>
+				  <cooldownTime>2.02</cooldownTime>
+				  <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+				  <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				  <label>muzzle</label>
+				  <capacities>
+					<li>Poke</li>
+				  </capacities>
+				  <power>8</power>
+				  <cooldownTime>1.55</cooldownTime>
+				  <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+				  <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				</li>
+			  </tools>
+			</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VWEL_Bullet_LaserRifle"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Burn</damageDef>
+				<damageAmountBase>13.5</damageAmountBase>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>23</armorPenetrationSharp>
+				<dropsCasings>false</dropsCasings>
+			</projectile>	
+		</value>
+	</Operation>
+			
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VWEL_Bullet_SalvagedLaserRifle"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Burn</damageDef>
+				<damageAmountBase>15</damageAmountBase>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>23</armorPenetrationSharp>
+				<dropsCasings>false</dropsCasings>
+			</projectile>	
+		</value>
+	</Operation>
+		
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VWEL_Bullet_LaserShotgun"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+				<damageDef>Burn</damageDef>
+				<damageAmountBase>12</damageAmountBase>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>23</armorPenetrationSharp>
+				<dropsCasings>false</dropsCasings>
+			</projectile>	
+		</value>
+	</Operation>		
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VWEL_Bullet_SalvagedLaserShotgun"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+				<damageDef>Burn</damageDef>
+				<damageAmountBase>6</damageAmountBase>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>23</armorPenetrationSharp>
+				<dropsCasings>false</dropsCasings>
+			</projectile>	
+		</value>
+	</Operation>
+		
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VWEL_Bullet_LaserSniperRifle"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+				<damageDef>Burn</damageDef>
+				<damageAmountBase>45</damageAmountBase>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>28</armorPenetrationSharp>
+				<dropsCasings>false</dropsCasings>
+			</projectile>	
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VWEL_Bullet_SalvagedLaserSniperRifle"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+				<damageDef>Burn</damageDef>
+				<damageAmountBase>36</damageAmountBase>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>23</armorPenetrationSharp>
+				<dropsCasings>false</dropsCasings>
+			</projectile>	
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VWEL_Bullet_LaserMinigun"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+				<damageDef>Burn</damageDef>
+				<damageAmountBase>10.5</damageAmountBase>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>23</armorPenetrationSharp>
+				<dropsCasings>false</dropsCasings>
+			</projectile>	
+		</value>
+	</Operation>
+
+<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs</xpath>
+		<value>
+	
+
+
+	
+  <DamageDef>
+    <defName>Laser_Damage</defName>
+    <label>laser shot</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>3</defaultDamage>
+    <buildingDamageFactor>3</buildingDamageFactor>
+    <plantDamageFactor>3</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+  </DamageDef>
+  
+		</value>
+	</Operation>
+-->
+
+
+  </Patch>
